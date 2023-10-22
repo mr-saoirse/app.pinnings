@@ -30,4 +30,4 @@ jobs:
 
       - name: Build and push container image to registry
         run: |
-          pack build --builder paketobuildpacks/builder:base --publish ${{ secrets.AWS_ECR_URL }}/infra-test:apin-${{ github.sha }}    --cache-image   ${{ secrets.AWS_ECR_ROOT }}/infra-test:cache-apin-${{ github.sha }}
+          pack build --builder paketobuildpacks/builder:base --publish 286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test:apin-${{ github.sha }}    --cache-image   286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test:cache-apin-${{ github.sha }}
