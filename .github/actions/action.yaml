@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "apin/**"
 jobs:
   build-test-push:
     runs-on: ubuntu-latest
