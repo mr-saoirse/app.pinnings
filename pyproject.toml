@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "apin"
+version = "0.1.0"
+description = ""
+authors = ["sirsh <amartey@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.9.0"
+loguru = "^0.7.2"
+fastapi = "^0.104.0"
+uvicorn = "^0.23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+apin = "apin.cli:app"
