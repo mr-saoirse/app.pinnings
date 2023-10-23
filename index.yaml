@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   apin-kagent:
   - apiVersion: v2
+    created: "2023-10-23T17:31:43.417089698Z"
+    description: A simple Helm chart for Kubernetes
+    digest: 87d07d945c7e385c47e1a04a1d78ec48040e24a6fb65d706ac68c2a687791743
+    name: apin-kagent
+    type: application
+    urls:
+    - https://github.com/mr-saoirse/app.pinnings/releases/download/apin-kagent-0.1.2/apin-kagent-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2023-10-23T17:20:03.974342222Z"
     description: A simple Helm chart for Kubernetes
     digest: 9051e69a04f8baac4bd51c42fc5fbb1b36c35fa8eea298bc6f250ef8b22d7ef2
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/mr-saoirse/app.pinnings/releases/download/apin-kagent-0.1.1/apin-kagent-0.1.1.tgz
     version: 0.1.1
-generated: "2023-10-23T17:20:03.974347423Z"
+generated: "2023-10-23T17:31:43.417095797Z"
