@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/mr-saoirse/app.pinnings.git
     path: stack/modules/workflow
-    targetRevision: main
+    targetRevision: HEAD
   destination:
     namespace: argo
     server: https://kubernetes.default.svc

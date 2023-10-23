@@ -16,7 +16,8 @@ spec:
     #this is the github pages link
     repoURL: https://mr-saoirse.github.io/app.pinnings
     #set this to our origin revision - custom module - strings seemed to be important here
-    targetRevision: "0.1.4"
+    # the builder should discover the latest for apin-kagent and use that
+    targetRevision: "0.1.5"
     helm:
       valuesObject:
         image:
