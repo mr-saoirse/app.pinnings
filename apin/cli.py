@@ -22,6 +22,17 @@ def run_method(
             f.write(contents)
 
 
+@app.command("serve")
+def serve_api(
+    name: str = typer.Option(None, "--name", "-n"),
+):
+    # currently just one api here
+    from apin.app import app
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8008)
+
+
 @app.command("build")
 def run_method(
     data: str = typer.Option(None, "--data", "-d"),
