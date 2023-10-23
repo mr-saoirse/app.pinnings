@@ -2,7 +2,7 @@
 #see: https://argo-cd.readthedocs.io/en/stable/user-guide/kustomize/
 
 #kubectl apply -f application-sets/core/workflow-application.yaml
-# (TODO add argo workflows to the stack for completness as a HELM chart)
+# (TODO add argo workflows to the stack for completeness as a HELM chart)
 
 apiVersion: argoproj.io/v1alpha1
 kind: Application
