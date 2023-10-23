@@ -1,1 +1,18 @@
 #git@github.com:mr-saoirse/app.pinnings.git
+#see: https://argo-cd.readthedocs.io/en/stable/user-guide/kustomize/
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: the-workflow
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mr-saoirse/app.pinnings.git
+    path: stack/modules/workflow
+    targetRevision: main
+  destination:
+    namespace: argo
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true

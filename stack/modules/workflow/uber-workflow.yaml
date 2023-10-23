@@ -135,7 +135,7 @@ spec:
 
         #we can pass this in to override later
         #image: "{{workflow.parameters.image}}"
-        image: the-node-image
+        image: 286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test
         imagePullPolicy: Always
         # envFrom:
         #   - configMapRef:

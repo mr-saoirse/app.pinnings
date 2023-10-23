@@ -1,0 +1,26 @@
+#this application points to the mother module
+#git@github.com:mr-saoirse/app.pinnings.git
+#https://github.com/mr-saoirse/app.pinnings/tree/main/stack/modules/mother-deployment
+
+#see:https://argo-cd.readthedocs.io/en/stable/user-guide/helm/
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mother-app
+spec:
+  project: default
+  source:
+    helm:
+      valueObject:
+        image:
+          repository: 286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test
+          tag: apin-latest
+      chart: https://github.com/mr-saoirse/app.pinnings/stack/modules/mother-deployment
+      targetRevision: main
+  destination:
+    namespace: argo
+    server: https://kubernetes.default.svc
+
+  syncPolicy:
+    automated:
+      prune: true

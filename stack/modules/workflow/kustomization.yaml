@@ -6,4 +6,4 @@ resources:
   - uber-workflow.yaml
 images:
   - name: 286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test
-    newTag: "123"
+    newTag: "apin-latest"
