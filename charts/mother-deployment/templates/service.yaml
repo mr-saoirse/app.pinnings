@@ -1,16 +1,15 @@
- 
-# templates/service.yaml
+
+# templates/service.yaml CONTENTS
 apiVersion: v1
 kind: Service
 metadata:
-  name:  {{ .Values.name }}
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+      targetPort: 8008
   selector:
-    app.kubernetes.io/name: {{ .Values.name }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+    app: {{ .Values.name }}

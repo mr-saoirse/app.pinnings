@@ -1,0 +1,20 @@
+
+# templates/apin-scheduler.yaml CONTENTS
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apin-scheduler
+  labels:
+    app: apin-scheduler
+spec:
+  containers:
+  - name: apin-scheduler
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+    #command: ["poetry", "run", "apin", "scheduler", "start"]
+    resources:
+      limits:
+        cpu: "0.2"
+        memory: "128Mi"
+      requests:
+        cpu: "0.1"
+        memory: "64Mi"

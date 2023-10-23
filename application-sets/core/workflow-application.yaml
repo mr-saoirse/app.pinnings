@@ -7,7 +7,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: the-workflow
+  name: the-workflow-runner
 spec:
   project: default
   source:

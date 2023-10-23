@@ -1,17 +1,17 @@
-# values.yaml
+# values.yaml CONTENTS
 replicaCount: 1
 name: apin-kagent
 image:
-  repository: nginx
-  tag: stable
+  repository: apin-kagent
+  tag: latest
   pullPolicy: IfNotPresent
 resources:
-  requests:
-    cpu: 100m
-    memory: 128Mi
   limits:
-    cpu: 200m
-    memory: 256Mi
+    cpu: "0.5"
+    memory: "256Mi"
+  requests:
+    cpu: "0.2"
+    memory: "128Mi"
 service:
   type: ClusterIP
   port: 8008
