@@ -1,0 +1,17 @@
+# values.yaml CONTENTS
+replicaCount: 1
+name: apin-kagent
+image:
+  repository: apin-kagent
+  tag: latest
+  pullPolicy: IfNotPresent
+resources:
+  limits:
+    cpu: "0.5"
+    memory: "256Mi"
+  requests:
+    cpu: "0.2"
+    memory: "128Mi"
+service:
+  type: ClusterIP
+  port: 8008

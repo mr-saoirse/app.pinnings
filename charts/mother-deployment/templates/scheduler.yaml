@@ -8,7 +8,7 @@ spec:
   containers:
   - name: apin-scheduler
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-    command: ["poetry", "run", "apin", "scheduler", "start"]
+    command: ["apin", "scheduler", "start"]
     resources:
       requests:
         cpu: "100m"

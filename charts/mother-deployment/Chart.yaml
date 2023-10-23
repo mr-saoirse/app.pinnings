@@ -1,6 +1,6 @@
 # Chart.yaml
 apiVersion: v2
 name: apin-kagent
-version: 0.1.4
+version: 0.1.5
 description: A simple Helm chart for Kubernetes
 type: application

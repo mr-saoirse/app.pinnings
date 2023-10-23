@@ -1,6 +1,6 @@
- 
 # values.yaml
 replicaCount: 1
+name: apin-kagent
 image:
   repository: nginx
   tag: stable

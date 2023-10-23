@@ -3,17 +3,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "todo-attribute-name"
+  name: {{ .Values.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name:  "todo-attribute-name"
+      app.kubernetes.io/name:  {{ .Values.name }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name:  "todo-attribute-name"
+        app.kubernetes.io/name: {{ .Values.name }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:

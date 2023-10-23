@@ -1,5 +1,6 @@
 name: Release Charts
 
+#TODO change to only run when charts change
 on:
   push:
     branches:

@@ -14,9 +14,9 @@ spec:
     #asd
     chart: apin-kagent
     #this is the github pages link
-    repoURL: https://mr-saoirse.github.io/app.pinnings/
-    #set this to our origin revision - custom module
-    targetRevision: 0.1.3
+    repoURL: https://mr-saoirse.github.io/app.pinnings
+    #set this to our origin revision - custom module - strings seemed to be important here
+    targetRevision: "0.1.4"
     helm:
       valuesObject:
         image:
