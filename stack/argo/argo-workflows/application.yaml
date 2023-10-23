@@ -12,7 +12,7 @@ spec:
     #in my case im using a custom project and i add source repos that are permitted to it
     repoURL: https://argoproj.github.io/argo-helm
     #go to the repo and check the latest helm version
-    targetRevision: 0.29.0
+    targetRevision: 0.36.1
     helm:
       valueFiles:
         - values.yaml
