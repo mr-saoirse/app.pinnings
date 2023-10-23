@@ -11,12 +11,12 @@ metadata:
 spec:
   project: default
   source:
-    #
+    #asd
     chart: apin-kagent
     #this is the github pages link
     repoURL: https://mr-saoirse.github.io/app.pinnings/
     #set this to our origin revision - custom module
-    targetRevision: 0.1.2
+    targetRevision: 0.1.3
     helm:
       valuesObject:
         image:
