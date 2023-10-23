@@ -39,9 +39,11 @@ For best results also deploy the operators
 WE have
 
 - init-  we add basic things such as ingress controllers, knative, karpenter and things like that
-- we add argo tools as core stacl
+- we add argo tools as core stack
 - application sets - these are flavours of deployments that are treated the same and easy to add from existing templates. the template can be anything. We generate it with LLM
   - services, deployments and workflows are examples
 - we add operators via OLM
 - we add observability
 - we probably will add something like Pulsar
+
+- read and write workflow perms
