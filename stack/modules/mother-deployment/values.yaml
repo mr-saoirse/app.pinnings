@@ -1,0 +1,17 @@
+ 
+# values.yaml
+replicaCount: 1
+image:
+  repository: nginx
+  tag: stable
+  pullPolicy: IfNotPresent
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+service:
+  type: ClusterIP
+  port: 8008

@@ -31,3 +31,15 @@ jobs:
       - name: Build and push container image to registry
         run: |
           pack build --builder paketobuildpacks/builder:base --publish 286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test:apin-${{ github.sha }}    --cache-image   286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test:cache-apin-${{ github.sha }}
+
+      #get the changes and post them
+      # - uses: jitterbit/get-changed-files@v1
+      #   id: detect_changes
+      #   continue-on-error: true
+      #   with:
+      #     format: csv
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Post Changes
+      #   run: |
+      #     python .github/workflows/post_changes.py ${{ secrets.APIN_KEY }} ${{ github.sha }} ${{ steps.detect_changes.outputs.all }}

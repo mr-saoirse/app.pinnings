@@ -1,0 +1,1 @@
+# this docker image is for the main service that does some things with K8s outside of the normal stuff

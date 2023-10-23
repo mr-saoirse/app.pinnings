@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-workflows
+  #this namespace must be like this->argo can add the helm apps this way
+  #this is not a destination
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: argo-workflows
+    #in my case im using a custom project and i add source repos that are permitted to it
+    repoURL: https://argoproj.github.io/argo-helm
+    #go to the repo and check the latest helm version
+    targetRevision: 0.29.0
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    #by default you can use the in-cluster setting of https://kubernetes.default.svc
+    server: "https://URI-TO-YOUR-CLUSTER.com"
+    # ok for now
+    namespace: default

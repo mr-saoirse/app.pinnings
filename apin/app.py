@@ -1,11 +1,16 @@
+#!/usr/local/bin/python3
 from fastapi import FastAPI, APIRouter
 import typing
 from apin.core.types import ChangeSet
 
 
-app = FastAPI()
-api_router = APIRouter()
 PROCESS_NAME = "kagent"
+app = FastAPI(
+    title="Meta ONE API",
+    openapi_url=f"/{PROCESS_NAME}/openapi.json",
+    docs_url=f"/{PROCESS_NAME}/docs",
+)
+api_router = APIRouter()
 
 
 @app.get("/")

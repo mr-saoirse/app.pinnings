@@ -1,0 +1,16 @@
+ 
+# templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "apin-kagent.fullname" . }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "apin-kagent.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

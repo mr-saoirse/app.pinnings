@@ -1,0 +1,24 @@
+# this is the fast argo-cd setup just to test the other stuff
+# in practice we would be more thoughtful about how we install it, probably as an operator
+# kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+# kubectl apply -f ./cluster-role-binding.yaml
+# #admin password for argo server
+# kubectl get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+# #login via K8s
+# argocd login cd.argoproj.io --core
+# #open a port or use kubeforwarder tool
+# #kubectl port-forward svc/argocd-server 8080:80
+# connect repo to cluster with the public deploy key on git and the private stuff connecting using SSH
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-admin-argocd-contoller
+subjects:
+  - kind: ServiceAccount
+    name: argocd-application-controller
+    namespace: default
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin

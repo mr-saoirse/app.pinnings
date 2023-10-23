@@ -1,0 +1,22 @@
+#I want an application set that is a workflow (Kustomize), a HELM deployment and a kustomized pod
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: main-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: templates/workflow
+  destination:
+    namespace: argocd
+# apiVersion: argoproj.io/v1alpha1
+# kind: ApplicationSet
+# metadata:
+#   name: my-appset
+# spec:
+#   generateNamespace: true
+#   generators:
+#   - helm:
+#       chart: my-helm-chart
