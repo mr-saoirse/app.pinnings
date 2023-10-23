@@ -3,17 +3,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "apin-kagent.fullname" . }}
+  #name: {{ include "apin-kagent.fullname" . }}
+  name: "todo-attribute-name"
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "apin-kagent.name" . }}
+      app.kubernetes.io/name:  "todo-attribute-name"
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "apin-kagent.name" . }}
+        app.kubernetes.io/name:  "todo-attribute-name"
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
