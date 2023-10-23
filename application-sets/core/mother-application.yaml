@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     chart: mother-deployment
-    repoURL: https://github.com/mr-saoirse/app.pinnings/tree/main/stack/modules
+    repoURL: https://github.com/mr-saoirse/app.pinnings/tree/gh-pages
     #set this to our origin revision - custom module
     targetRevision: 0.1.0
     helm:

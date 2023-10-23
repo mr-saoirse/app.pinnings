@@ -1,47 +1,20 @@
-# app.pinnings
+## Usage
 
-a different take on underpin
+[Helm](https://helm.sh) must be installed to use the charts.  Please refer to
+Helm's [documentation](https://helm.sh/docs) to get started.
 
-app'pinnings builds Kubernetes systems from any mono repo. It can be tested on itself
+Once Helm has been set up correctly, add the repo as follows:
 
-this is what happens
+  helm repo add <alias> https://<orgname>.github.io/helm-charts
 
-1. You push to main (any mono repo)
-2. The build is packed
-3. At the end we call apin service with changes (this service)
-4. apin service pulls down the repo (any repo) and checks changes and builds a manifest change set
-5. the manifests replaces the app-manifests in the configured branch (not main)
-6. argo CD pulls the manifests
+If you had already added this repo earlier, run `helm repo update` to retrieve
+the latest versions of the packages.  You can then run `helm search repo
+<alias>` to see the charts.
 
-For free you get a few things on your stack
+To install the <chart-name> chart:
 
-- A workflow runner
-- Some default templates for apis and event consumers
-- Observability stuff
-- Log collector daemons
+    helm install my-<chart-name> <alias>/<chart-name>
 
-For best results also deploy the operators
+To uninstall the chart:
 
-- Pulsar
-- OTel
-
-## notes
-
-- The service runs on a Docker image with Kustomize and other bits but everything else is packed with packer
--
-
-```bash
-
-```
-
-## Stack
-
-WE have
-
-- init-  we add basic things such as ingress controllers, knative, karpenter and things like that
-- we add argo tools as core stacl
-- application sets - these are flavours of deployments that are treated the same and easy to add from existing templates. the template can be anything. We generate it with LLM
-  - services, deployments and workflows are examples
-- we add operators via OLM
-- we add observability
-- we probably will add something like Pulsar
+    helm delete my-<chart-name>
