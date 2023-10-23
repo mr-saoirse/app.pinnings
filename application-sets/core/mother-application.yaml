@@ -12,9 +12,10 @@ spec:
   project: default
   source:
     chart: mother-deployment
-    repoURL: https://github.com/mr-saoirse/app.pinnings
+    #this is the github pages link
+    repoURL: https://mr-saoirse.github.io/app.pinnings/
     #set this to our origin revision - custom module
-    targetRevision: 0.1.0
+    targetRevision: 0.1.1
     helm:
       valuesObject:
         image:
