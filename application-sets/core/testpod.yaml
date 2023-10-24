@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: apin-scheduler-test
+    app: apin-scheduler-tester
     app.kubernetes.io/instance: mother-app
-  name: apin-scheduler-test
+  name: apin-scheduler-tester
   namespace: argo
 spec:
   containers:
     - image: "286292902993.dkr.ecr.us-east-1.amazonaws.com/infra-test:apin-latest"
-      command: ["poetry", "run", "apin", "scheduler", "start"]
+      #command: ["poetry", "run", "apin", "scheduler", "start"]
       imagePullPolicy: Always
       name: apin-scheduler
       resources:
